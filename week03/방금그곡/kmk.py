@@ -15,20 +15,23 @@ def solution(m, musicinfos):
     change = info[3]
     for c in repl.keys():
       change = change.replace(c, repl[c])
-      
+    
+    #재생시간 구하기
     hour = int(info[1][:2]) - int(info[0][:2])
     if int(info[1][3:5]) < int(info[0][3:5]):
       min = (60-int(info[0][3:5])) + int(info[1][3:5])
       hour -= 1
     else:
       min = int(info[1][3:5]) < int(info[0][3:5])
-      
+    total = (hour*60)+min  
+    
     length = len(change)
-    total = (hour*60)+min  #재생시간 
     song = change*(int(total//length)) + change[:int(total%length)]
+    
     music.append([song, total])
     name[song] = info[2]
   
+  #악보 일치한다면 answer에 append
   for i in range(len(music)):
     if m in music[i][0]:
       answer.append([name[music[i][0]], music[i][1], i])
