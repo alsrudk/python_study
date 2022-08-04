@@ -28,7 +28,6 @@ def solution(m, n, board):
     while True:
         board, rm_num = remove(m, n, board)
         if rm_num == 0: break
-        else:
-            ans += rm_num
+        ans += rm_num
         board = relocate(m, n, board)
     return ans
