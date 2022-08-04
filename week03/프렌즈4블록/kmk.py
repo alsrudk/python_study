@@ -21,7 +21,7 @@ def move(m, board):
     board = [list(i) for i in zip(*board)]  #세로로 묶어서 list 만들기                         
     for row in board:
         for i in range(m):
-            if row[i] == 0 and i != 0:      #맨위가 0이면 move 필요 X
+            if row[i] == 0 and i != 0:      
                 count = 1                   #0의 개수
                 index = i                   #인덱스 저장
                 while True:
