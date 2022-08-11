@@ -4,17 +4,24 @@ def solution(msg):
   index = {}
   for i in range(26):
     index[chr(65+i)] = i+1
-    
-  cur, next = 0, 0
+  msg = list(msg)
+  
   while True:
-    next += 1
-    if next == len(msg):
-      answer.append(index[msg[cur:next]])
-      break
-    if msg[cur:next+1] not in index:
-      index[msg[cur:next+1]] = len(index) + 1
-      answer.append(index[msg[cur:next]])
-      cur = next
-      
+    for j in range(1, len(msg)+1):
+      key = ''.join(msg[:j])
+      if key in index:
+        if j == len(msg):
+          answer.append(index[key])
+          return answer
+        else:
+          continue
+      else:
+        index[key] = len(index)+1
+        key_ = ''.join(msg[:j-1])
+        answer.append(index[key_])
+        del msg[:j-1]
+        berak
+  
+  
   return answer
     
