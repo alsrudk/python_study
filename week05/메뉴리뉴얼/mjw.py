@@ -18,4 +18,5 @@ def solution(orders, course):
             for sets, odrN in sorted_sets:
                 if maxi >= 2 and odrN == maxi:
                     ans.append(sets)
+                else: break
     return sorted(ans)
