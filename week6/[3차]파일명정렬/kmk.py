@@ -7,8 +7,6 @@ def split(file):
             idx += 1
         else:
             break
-    file = file[idx:]
-    idx = 0
     while idx < len(file):
         if file[idx].isdigit():
             number += file[idx]
