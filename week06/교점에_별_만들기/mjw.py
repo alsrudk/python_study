@@ -23,8 +23,8 @@ def solution(line):
     
     answer = [['.']*(max_x-min_x+1) for _ in range(max_y-min_y+1)]
     for (x,y) in points:
-        x += (-1)*min_x
-        y += (-1)*min_y
+        x -= min_x
+        y -= min_y
         answer[y][x] = '*'
         
     return [''.join(k) for k in answer][::-1]
