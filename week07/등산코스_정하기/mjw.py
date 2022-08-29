@@ -37,7 +37,7 @@ def solution(n, paths, gates, summits):
         is_summit[i] = True
         
     for gate in gates:
-        costMap = dijkstra(gate, costMap, graph, is_gate, is_summit)
+        costMap = dijkstra(gate, costMap, graph, is_gate, is_summit)  # costMap : 임의의 gate에서 k번 노드에 도달하기까지의 최소 intensity
 
     min_summit = min(summits, key=lambda i: [costMap[i], i])
     return [min_summit, costMap[min_summit]]
