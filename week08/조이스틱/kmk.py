@@ -38,7 +38,5 @@ def solution(name):
     move = [0] * len(name)
     for i in range(len(name)):
         move[i] = min(ord(name[i])-ord('A'), ord('Z')-ord(name[i])+1)
-        
-        
-    answer = dfs(move, 0, 0, name)
-    return answer
+       
+    return dfs(move, 0, 0, name)
