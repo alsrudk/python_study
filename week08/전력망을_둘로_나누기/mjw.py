@@ -22,7 +22,7 @@ def solution(n, wires):
         
         n1 = dfs(a, graph, visited=[0]*(n+1))
         n2 = dfs(b, graph, visited=[0]*(n+1))
-        min_abs = min(abs(sum(n1)-sum(n2)), min_abs) if n1!=n2 else min_abs
+        min_abs = min(abs(sum(n1)-sum(n2)), min_abs)
         
         graph[a] |= {b}
         graph[b] |= {a}
