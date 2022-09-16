@@ -5,8 +5,6 @@ def dfs(idx, numbers, target, cur, result = [], answer = 0):
         return
     dfs(idx+1, numbers, target, cur+[numbers[idx]])
     dfs(idx+1, numbers, target, cur+[-numbers[idx]])
-    
-    
     return len(result)
     
     
