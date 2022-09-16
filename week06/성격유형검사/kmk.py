@@ -11,8 +11,6 @@ def solution(survey, choices):
       result[survey[i][1]] += score[choices[i]]
     elif choices[i] < 4:
       result[survey[i][0]] += score[choices[i]]
-
-  print(result)
     
   if result['R'] > result['T']:
     answer += 'R'
