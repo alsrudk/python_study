@@ -5,8 +5,8 @@ def solution(survey, choices):
   
   for i in range(len(survey)):
     if choices[i] == 4:
-      result[survey[i][0]] = 0
-      result[survey[i][1]]
+      result[survey[i][0]] += 0
+      result[survey[i][1]] += 0
     elif choices[i] > 4:
       result[survey[i][1]] += score[choices[i]]
     elif choices[i] < 4:
