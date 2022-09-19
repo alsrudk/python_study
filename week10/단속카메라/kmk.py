@@ -7,14 +7,9 @@ def solution(routes):
         visit = []
         for i in range(len(routes)):
             if routes[i][0] <= location:
-                visit.append(i)
-        
-        meet = []
-        for idx in visit:
-            meet.append(routes[idx])
-        for m in meet:
-            routes.remove(m)
-        
+                visit.append(routes[i])
+        for car in visit:
+            routes.remove(car) 
         answer += 1
         
     return answer
