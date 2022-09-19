@@ -1,7 +1,7 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/42884#
 
 def solution(routes):
-    routes.sort(key=lambda x: (x[0], -x[1])) # 진입 지점이 빠른 순 > 주행 거리 긴 순
+    routes.sort(key=lambda x: x[0])
     
     answer = 0
     prev = routes[0]    # 이전 카메라가 설치된 구간
